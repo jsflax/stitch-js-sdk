@@ -20,7 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "fetch-everywhere": "^1.0.5",
-    "mongodb-extjson": "^1.0.4"
+    "mongodb-extjson": "christkv/mongodb-extjson#master"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -35,6 +35,7 @@
     "eslint": "^3.18.0",
     "eslint-loader": "^1.6.3",
     "fetch-mock": "^5.9.4",
+    "imports-loader": "^0.7.1",
     "jest": "^19.0.2",
     "jest-fetch-mock": "^1.0.8",
     "jsdoc": "^3.4.3",

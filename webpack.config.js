@@ -36,6 +36,14 @@ const config = {
         test: /(\.jsx|\.js)$/,
         loader: 'eslint-loader',
         exclude: /node_modules/
+      },
+      {
+        test: require.resolve('whatwg-fetch'),
+        use: 'imports-loader?self=>global'
+      },
+      {
+        test: require.resolve('isomorphic-fetch'),
+        use: 'imports-loader?self=>global'
       }
     ]
   },
@@ -43,7 +51,11 @@ const config = {
     modules: [ path.resolve('./src'), path.resolve('./node_modules') ],
     extensions: ['.json', '.js']
   },
-  plugins: plugins
+  plugins: plugins,
+  node: {
+    Buffer: false,
+    process: false
+  }
 };
 
 module.exports = config;
